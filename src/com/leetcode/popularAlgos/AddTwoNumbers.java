@@ -2,7 +2,6 @@ package com.leetcode.popularAlgos;
 
 public class AddTwoNumbers {
 	
-	
 	@SuppressWarnings("unused")
 	private ListNode flushList(ListNode currentNode , ListNode leftOverListNode, int buffer) {
 		

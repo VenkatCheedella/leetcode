@@ -1,5 +1,7 @@
 package com.leetcode.popularAlgos;
 
+import com.leetcode.utility.ListNode;
+
 public class DeleteListNode {
 	
 	public void deleteNode(ListNode node) {
