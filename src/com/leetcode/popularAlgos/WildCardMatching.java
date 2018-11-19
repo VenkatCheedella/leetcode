@@ -51,18 +51,44 @@ public class WildCardMatching {
         
         return helper(s, p, i+1, j+1);
     }
+
+    public static boolean isPatternMatch(String str, String pattern) {
+        int s =0, p = 0, match = 0, strIdx = -1;
+
+        while(s < str.length()) {
+            if(p < pattern.length() && (str.charAt(s) == pattern.charAt(p) || pattern.charAt(p) == '?')){
+                ++s;
+                ++p;
+            }
+
+            else if(p < pattern.length() && pattern.charAt(p) == '*'){
+                match = s;
+                strIdx = p;
+                ++p;
+            }
+
+            else if(strIdx != -1){
+                p = strIdx +1;
+                ++match;
+                s = match;
+            }
+
+            else{
+                return false;
+            }
+        }
+
+        while(p < pattern.length() && pattern.charAt(p) == '*'){
+            ++p;
+        }
+
+        return p == pattern.length();
+    }
     
     public static void main(String[] args) {
-		System.out.println(WildCardMatching.isMatch("leetcode", "*e*t?d*"));
-		System.out.println(WildCardMatching.isMatch("aa", "a"));
-		int a =10;
-		String sample = Integer.toString(a) + ":";
-		System.out.println(sample);
-		int b = 17;
-		float s1 = a/b;
-		float s2 = 100/170;
-		if(s1 == s2) {
-			System.out.println("Float values are same ");
-		}
+		//System.out.println(WildCardMatching.isMatch("leetcode", "*e*t?d*"));
+		//System.out.println(WildCardMatching.isMatch("aa", "a"));
+        System.out.println(WildCardMatching.isPatternMatch("abbcde", "a*cf"));
+
 	}
 }

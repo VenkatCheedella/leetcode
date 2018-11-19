@@ -1,6 +1,7 @@
 package com.leetcode.popularAlgos;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Random;
 
 import com.leetcode.utility.TreeNode;
 
@@ -41,6 +42,8 @@ public class BinaryTreeMaxDepth {
 //		father.left = left;
 //		father.right = right;
 		System.out.println(new BinaryTreeMaxDepth().maxDepth(father));
+		Random r = new Random();
+		r.nextInt(7);
 	}
 
 }

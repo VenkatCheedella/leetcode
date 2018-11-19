@@ -1,12 +1,13 @@
 package com.leetcode.utility;
 
 public class TreeNode {
-	int val;
+	public int val;
 	public TreeNode left = null;
 	public TreeNode right = null;
 	
 	public TreeNode(int val) {
 		this.val = val;
+
 	}
 	
 	public void setLeft(TreeNode left) {

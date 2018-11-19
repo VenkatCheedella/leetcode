@@ -1,5 +1,8 @@
 package com.leetcode.popularAlgos;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class ReverseAString {
 	
@@ -22,6 +25,14 @@ public class ReverseAString {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(new ReverseAString().reverseString("sampl"));
+
+		//System.out.println(new ReverseAString().reverseString("sampl"));
+
+		int sample = 'a';
+
+		System.out.println(sample);
+
+		Map<String, List<String>> groups = new HashMap<>();
+
 	}
 }
